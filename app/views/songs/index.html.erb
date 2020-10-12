@@ -4,7 +4,7 @@
       <th>Title</th>
       <th>Year</th>
       <th>Genre</th>
-      <th>Artist name</th>
+      <th>Artist</th>
       <th></th>
     </tr>
   </thead>
@@ -13,13 +13,13 @@
 <% @songs.each do |song| %>
 <tr>
 <td><%= song.title %></td>
-<td><%= song.artist_name %></td>
 <td><%= song.release_year %></td>
 <td><%= song.genre %></td>
+<td><%= song.artist_name %></td>
 <td> <%= link_to 'Show', song %> |
 <%= link_to 'Change', edit_song_path(song) %> |
 <%= link_to 'No More', song, method: :delete%></td>
 </tr>
 <% end %>
 </tbody>
-</table> 
+</table>
